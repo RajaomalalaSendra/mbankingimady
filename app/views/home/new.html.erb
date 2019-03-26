@@ -1,0 +1,6 @@
+<%if current_user%>
+	<div style="margin-left: 1200px;">
+		<%= link_to "sign out", destroy_user_session_path, :method => 'delete' %>
+	</div>
+	<%= react_component "New" %>
+<%end%>
