@@ -1,1 +1,8 @@
-<%= react_component "IndexHome" %>
+<%if current_user%>
+	<div style="margin-left: 1200px;">
+		<%= link_to "sign out", destroy_user_session_path, :method => 'delete' %>
+	</div>
+	<%= react_component "IndexHome" %>
+<%else%>	
+	<%= react_component "IndexHomeTwo" %>
+<%end%>
