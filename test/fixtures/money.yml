@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1
+  reference: MyString
+  operator: MyString
+  adress: MyString
+  drawer: MyString
+  number: MyString
+
+two:
+  amount: 1
+  reference: MyString
+  operator: MyString
+  adress: MyString
+  drawer: MyString
+  number: MyString
