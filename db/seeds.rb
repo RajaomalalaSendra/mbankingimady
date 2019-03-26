@@ -14,5 +14,6 @@ number = ["032","034","032", "032", "033"]
 fees = [300, 500, 500, 700, 1000]
 user_mail = ['mail@mail1.note', 'mail@mail2.note', 'mail@mail3.note', 'mail@mail4.note', 'mail@mail5.note']
 5.times do |i|
-	Amount.create(amount: amounts[i],  fee: fees[i], reference: reference[i], operator: operator[i])
+	User.create(email: user_mail[i], password: "mememe")
+	Amount.create(amount: amounts[i],  fee: fees[i], reference: reference[i], operator: operator[i], adress: adress[i], drawer: drawer[i], number: number[i])
 end

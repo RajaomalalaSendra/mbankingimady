@@ -5,6 +5,9 @@ class CreateAmount < ActiveRecord::Migration[5.2]
       t.integer :fee
       t.string :reference
       t.string :operator
+      t.string :adress
+      t.string :drawer
+      t.string :number
       t.timestamps
     end
   end
