@@ -5,26 +5,33 @@ class New extends React.Component{
       	amounts: []
     	};
     	this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    	this.addNewAmount = this.addNewAmount.bind(this);
   	}
-
-	let formFields = {}
-
+  	handleFormSubmit(amount, fee, reference, operator, adress, drawer, number){
+  		let user_id = 2;
+  		let body = JSON.stringify({amount: {amount: amount, fee: fee, reference: reference, operator: operator, adress: adress, drawer: drawer, number: number, user_id: user_id} })
+		fetch(`/api/v1/amounts`, {
+      	method: 'POST',
+      	headers: {
+        	'Content-Type': 'application/json'
+      	},
+      	body: body,
+    	}).then((response) => {return response.json()})
+    		.then((amount)=>{
+      		this.addNewAmount(amount)
+    	})
+	}
+	addNewAmount(amount){
+	    this.setState({
+	      amounts: this.state.amounts.concat(amount)
+	    })
+	}
  	render(){
 	return(
 		<div>
 			<a href="/">home</a> ||
 			<a href="/dashboard">dashboard</a>
-		    <form onSubmit={ (e) => { props.handleFormSubmit(formFields.name.value, formFields.description.value); e.target.reset();}
-}>
-			     <input ref={input => formFields.amount = input} placeholder='Enter the amount'/>
-			     <input ref={input => formFields.fee = input} placeholder='Enter the fee' />
-			     <input ref={input => formFields.reference = input} placeholder='Enter the reference'/>
-			     <input ref={input => formFields.operator = input} placeholder='Enter the operator' />
-			     <input ref={input => formFields.adress = input} placeholder='Enter the adress'/>
-			     <input ref={input => formFields.drawer = input} placeholder='Enter the drawer' />
-			     <input ref={input => formFields.number = input} placeholder='Enter the phone number of the sender' />
-			     <button>Submit</button>
-		    </form>
+			<IndexNew  handleFormSubmit={this.handleFormSubmit}/>
 		</div>
 	  )
  	}

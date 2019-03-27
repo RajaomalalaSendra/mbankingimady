@@ -21,6 +21,6 @@ class Api::V1::AmountsController < ApplicationController
   private
 
   def amount_params
-    params.require(:amount).permit(:id, :amount,  :fee, :reference, :operator, :adress, :drawer, :number)
+    params.require(:amount).permit(:id, :amount,  :fee, :reference, :operator, :adress, :drawer, :number, :user_id)
   end
 end

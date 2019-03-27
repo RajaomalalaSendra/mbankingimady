@@ -2,7 +2,8 @@ class Dashboard extends React.Component{
 	constructor(props) {
     super(props);
     this.state = {
-      amounts: []
+      amounts: [],
+      users: []
     	};
   	}
 
@@ -14,7 +15,7 @@ class Dashboard extends React.Component{
 	render(){
 		var amounts = this.state.amounts.map((amount) => {
 		  return(
-		   <div key={amount.id}>
+		   <div key={amount.user_id}>
 			    <p>{amount.amount}</p>
 			    <p>{amount.fee}</p>
 			    <p>{amount.reference}</p>
