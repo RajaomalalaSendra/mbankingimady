@@ -8,6 +8,7 @@ class CreateAmount < ActiveRecord::Migration[5.2]
       t.string :adress
       t.string :drawer
       t.string :number
+      t.belongs_to :user, index: true
       t.timestamps
     end
   end
