@@ -15,26 +15,37 @@ class Dashboard extends React.Component{
 	render(){
 		var amounts = this.state.amounts.map((amount) => {
 		  return(
-		   <div key={amount.user_id}>
-			    <p>{amount.amount}</p>
-			    <p>{amount.fee}</p>
-			    <p>{amount.reference}</p>
-			    <p>{amount.operator}</p>
-			    <p>{amount.adress}</p>
-			    <p>{amount.drawer}</p>
-			    <p>{amount.number}</p>
-		   </div>
+		   <table key={amount.user_id}>
+			    <tr className="bg-success">
+			    	<td>{amount.amount}</td>
+			    	<td>{amount.fee}</td>
+			    	<td>{amount.reference}</td>
+			    	<td>{amount.operator}</td>
+			    	<td>{amount.adress}</td>
+			    	<td>{amount.drawer}</td>
+			    	<td>{amount.number}</td>
+			    </tr>
+		   </table>
 		  )
 		 })
 		return(
 			<div>
-				<h1>The Dashboard Here</h1>
-				<div>
-					<a href="/">home</a> ||
-					<a href="/dashboard">dashboard</a> ||
-					<a href="/new">new</a>
+				<h1 style={{marginLeft: '50px'}}>The Dashboard Here</h1>
+				<div className="bg-success col-md-2 contact-info text-left" style={{marginLeft: '50px'}}>
+					<li><a className="menu" href="/">home</a></li>
+					<li><a className="menu" href="/dashboard">dashboard</a></li>
+					<li><a className="menu" href="/new">new</a></li>
 				</div>
-				<div style={{marginLeft: "200px"}}>
+				<div style={{marginLeft: "300px"}}>
+				<th>
+					<td>Amount</td>
+					<td>Fee</td>
+					<td>Reference</td>
+					<td>Operator</td>
+					<td>Adress</td>
+					<td>Drawer</td>
+					<td>Number</td>
+				</th>
 						{amounts}				
 				</div>
 			</div>

@@ -28,11 +28,13 @@ class New extends React.Component{
 	}
  	render(){
 	return(
-		<div>
-			<a href="/">home</a> ||
-			<a href="/dashboard">dashboard</a>
-			<IndexNew  handleFormSubmit={this.handleFormSubmit}/>
-		</div>
+    <div>
+		  <div className="bg-success col-md-2 contact-info text-left" style={{marginLeft: '50px'}}>
+        <li><a className="menu" href="/">home</a></li>
+        <li><a className="menu" href="/dashboard">dashboard</a></li>
+      </div>
+		  <IndexNew  handleFormSubmit={this.handleFormSubmit}/>
+    </div>	
 	  )
  	}
 }
