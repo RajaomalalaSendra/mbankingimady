@@ -34,7 +34,8 @@ class Dashboard extends React.Component{
 					<li><a className="menu" href="/dashboard">dashboard</a></li>
 					<li><a className="menu" href="/new">new</a></li>
 				</div>
-				<div style={{marginLeft: "300px"}}>
+
+				<div className="container" style={{marginLeft: "300px", width: "70%"}}>
 					<table id="customers">
 						<td className="thetd">Amount</td>
 						<td className="thetd">Fee</td>
