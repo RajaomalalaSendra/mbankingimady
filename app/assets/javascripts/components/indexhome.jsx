@@ -14,6 +14,7 @@ class IndexHome extends React.Component {
 					<p>This is the menu of ours for this mbanking....</p>
 					</div>
 				</div>
+				<Footer />
 			</div>
 		)
 	}

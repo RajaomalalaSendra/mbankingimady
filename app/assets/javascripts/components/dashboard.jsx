@@ -47,6 +47,7 @@ class Dashboard extends React.Component{
 						{amounts}
 					</table>				
 				</div>
+				<Footer />
 			</div>
 		)
 	}

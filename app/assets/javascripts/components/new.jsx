@@ -34,6 +34,7 @@ class New extends React.Component{
         <li><a className="menu" href="/dashboard">dashboard</a></li>
       </div>
 		  <IndexNew  handleFormSubmit={this.handleFormSubmit}/>
+      <Footer />
     </div>	
 	  )
  	}

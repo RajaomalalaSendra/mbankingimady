@@ -15,6 +15,7 @@ const IndexHomeTwo = (props) => {
 			    </div>
 			</nav>
 			<h1 style={{marginLeft: '100px'}}>The Home Two is Here</h1>
+			<Footer />
 		</div>
 	)
 }
