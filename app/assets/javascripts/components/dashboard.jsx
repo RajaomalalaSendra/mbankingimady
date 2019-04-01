@@ -15,17 +15,15 @@ class Dashboard extends React.Component{
 	render(){
 		var amounts = this.state.amounts.map((amount) => {
 		  return(
-		   <table key={amount.user_id}>
-			    <tr className="bg-success">
-			    	<td>{amount.amount}</td>
-			    	<td>{amount.fee}</td>
-			    	<td>{amount.reference}</td>
-			    	<td>{amount.operator}</td>
-			    	<td>{amount.adress}</td>
-			    	<td>{amount.drawer}</td>
-			    	<td>{amount.number}</td>
-			    </tr>
-		   </table>
+		    <tr key={amount.user_id}>
+		    	<td>{amount.amount}</td>
+		    	<td>{amount.fee}</td>
+		    	<td>{amount.reference}</td>
+		    	<td>{amount.operator}</td>
+		    	<td>{amount.adress}</td>
+		    	<td>{amount.drawer}</td>
+		    	<td>{amount.number}</td>
+		    </tr>
 		  )
 		 })
 		return(
@@ -37,16 +35,16 @@ class Dashboard extends React.Component{
 					<li><a className="menu" href="/new">new</a></li>
 				</div>
 				<div style={{marginLeft: "300px"}}>
-				<th>
-					<td>Amount</td>
-					<td>Fee</td>
-					<td>Reference</td>
-					<td>Operator</td>
-					<td>Adress</td>
-					<td>Drawer</td>
-					<td>Number</td>
-				</th>
-						{amounts}				
+					<table id="customers">
+						<td>Amount</td>
+						<td>Fee</td>
+						<td>Reference</td>
+						<td>Operator</td>
+						<td>Adress</td>
+						<td>Drawer</td>
+						<td>Number</td>
+						{amounts}
+					</table>				
 				</div>
 			</div>
 		)
