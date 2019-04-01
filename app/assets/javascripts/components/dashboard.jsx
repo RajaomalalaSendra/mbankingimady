@@ -36,13 +36,13 @@ class Dashboard extends React.Component{
 				</div>
 				<div style={{marginLeft: "300px"}}>
 					<table id="customers">
-						<td>Amount</td>
-						<td>Fee</td>
-						<td>Reference</td>
-						<td>Operator</td>
-						<td>Adress</td>
-						<td>Drawer</td>
-						<td>Number</td>
+						<td className="thetd">Amount</td>
+						<td className="thetd">Fee</td>
+						<td className="thetd">Reference</td>
+						<td className="thetd">Operator</td>
+						<td className="thetd">Adress</td>
+						<td className="thetd">Drawer</td>
+						<td className="thetd">Number</td>
 						{amounts}
 					</table>				
 				</div>
